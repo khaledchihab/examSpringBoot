@@ -17,6 +17,7 @@ public class person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    @Enumerated(EnumType.STRING)
     private role role;
     private int NbrMonthsTrain;
     private LocalDate DateOfBirth;

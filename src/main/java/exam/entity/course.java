@@ -20,6 +20,7 @@ public class course {
     private int numb;
     private LocalDate date;
     private int duration;
+    @Enumerated(EnumType.STRING)
     private level level;
 
     @ManyToOne

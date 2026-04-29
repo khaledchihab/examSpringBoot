@@ -21,5 +21,6 @@ public class exercise {
     private int duration;
 
     @ManyToOne
+    @Enumerated(EnumType.STRING)
     private course course;
 }
