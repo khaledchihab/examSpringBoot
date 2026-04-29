@@ -22,10 +22,10 @@ public class person {
     private int NbrMonthsTrain;
     private LocalDate DateOfBirth;
 
-    @OneToMany(mappedBy = "coach")
+    @OneToMany(mappedBy = "coach", cascade = CascadeType.ALL)
     private Set<course> coachedCourses;
 
-    @ManyToMany(mappedBy = "athletes")
+    @ManyToMany(mappedBy = "athletes", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private Set<course> courses;
 
 }
