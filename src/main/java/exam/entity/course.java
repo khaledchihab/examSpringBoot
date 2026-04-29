@@ -29,6 +29,6 @@ public class course {
     @ManyToMany
     private Set<person> athletes;
 
-    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     private Set<exercise> exercises;
 }
